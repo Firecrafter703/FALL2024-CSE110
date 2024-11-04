@@ -13,9 +13,9 @@ jobs: # the things being executed
   steps:
      - uses: actions/checkout@v4 # using version 4 of Actions
      - name: Install Dependencies
-       working-directory: ./FALL2024-CSE110
-       run: npm install
+      
+       run: cd FALL2024-CSE110 npm install
      - name: Unit Test
-       working-directory: ./FALL2024-CSE110
+
        run: npm test # the actual testing line
 
