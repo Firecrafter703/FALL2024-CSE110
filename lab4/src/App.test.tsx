@@ -48,6 +48,7 @@ describe("Budget tracker", () => {
     fireEvent.change(newExpenseCostInput, {
       target: { value: "302" },
     });
+    //should be 302
     fireEvent.click(newExpenseSubmit);
 
     const expenseName = screen.getByText("groceries");
@@ -103,8 +104,9 @@ describe("Budget tracker", () => {
       target: { value: "batteries" },
     });
     fireEvent.change(newExpenseCostInput, {
-      target: { value: "98" },
+      target: { value: "97" },
     });
+    //98
     fireEvent.click(newExpenseSubmit);
 
     expect(screen.getByTestId("Budget")).toHaveTextContent("Budget: $2000");
