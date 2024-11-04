@@ -13,8 +13,9 @@ jobs: # the things being executed
   steps:
      - uses: actions/checkout@v4 # using version 4 of Actions
      - name: Install Dependencies
-      
+       working-directory: run/here/lab4 
        run: npm install
+       
      - name: Unit Test
 
        run: npm test # the actual testing line
